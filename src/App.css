@@ -6,7 +6,6 @@
 }
 
 .bgColor {
-    margin-top: 20px;
 }
 
 .line {
@@ -24,36 +23,7 @@ p {
     margin-top: -2px;
 }
 
-button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 1em 3em;
-    font-size: 20px;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #1a1a1a;
-    cursor: pointer;
-    transition: border-color 0.25s;
-}
-button:hover {
-    border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-}
-
-@keyframes logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    a:nth-of-type(2) .logo {
-        animation: logo-spin infinite 20s linear;
-    }
+.customize-sections {
+  display: block;
+  margin-top: 20px;
 }

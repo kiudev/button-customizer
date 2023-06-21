@@ -1,20 +1,30 @@
 import { useState } from 'react'
 import './App.css'
-import Button from './components/Button'
+import Button from './components/Button/Button'
 import TextButton from './components/TextButton'
-import Color from './components/Color'
+import TextColor from './components/TextColor/TextColor'
+import BackgroundColor from './components/BackgroundColor/BackgroundColor'
+import Footer from './components/Footer/Footer'
 
 function App() {
+    // Create useState ("value" and "setValue") and a function that allows the user to write something in the button.
     const [value, setValue] = useState(false)
 
     const handleChange = text => {
         setValue(text.target.value)
     }
+    // Create useState ("bgColor" and "setbgColor") and a function that allows the user to print the background color in the button.
+    const [bgColor, setBgColor] = useState(false)
 
-    const [bgColor, setbgColor] = useState('')
+    const changeBackground = backgroundColor => {
+        setBgColor(backgroundColor.target.value)
+    }
 
-    const handleClick = color => {
-        setbgColor(color.target.value)
+    // Create useState ("textColor" and "setTextColor") and a function that allows the user to print the text color in the button.
+    const [textColor, setTextColor] = useState(false)
+
+    const changeText = text => {
+        setTextColor(text.target.value)
     }
 
     const containerStyles = {
@@ -24,65 +34,145 @@ function App() {
 
     return (
         <main>
-            <Button
-                text={value}
-                style={{
-                    backgroundColor: bgColor,
-                    width: '200px',
-                    height: '80px',
-                }}
-            />
-            <TextButton onchange={handleChange} />
-            <div className='line'></div>
-            <div className="bgColor">
-                <header>
-                    <h1>Background Color</h1>
-                </header>
-                <section style={containerStyles}>
-                    <Color
-                        text="Black"
-                        name="color"
-                        value="black"
-                        onclick={handleClick}
-                    />
-                    <Color
-                        text="Blue"
-                        name="color"
-                        value="blue"
-                        onclick={handleClick}
-                    />
-                    <Color
-                        text="Red"
-                        name="color"
-                        value="red"
-                        onclick={handleClick}
-                    />
-                    <Color
-                        text="Green"
-                        name="color"
-                        value="green"
-                        onclick={handleClick}
-                    />
-                    <Color
-                        text="Orange"
-                        name="color"
-                        value="orange"
-                        onclick={handleClick}
-                    />
-                    <Color
-                        text="Yellow"
-                        name="color"
-                        value="yellow"
-                        onclick={handleClick}
-                    />
-                    <Color
-                        text="White"
-                        name="color"
-                        value="white"
-                        onclick={handleClick}
-                    />
-                </section>
-            </div>
+            <header>
+              <h1>Test how your button looks</h1>
+                <Button
+                    text={value}
+                    style={{
+                        backgroundColor: bgColor,
+                        color: textColor,
+                        width: '200px',
+                        height: '80px',
+                    }}
+                />
+                <TextButton change={handleChange} />
+            </header>
+            <div className="line"></div>
+            <section className="customize-sections">
+                <div className="bgColor">
+                    <header>
+                        <h1>Background Color</h1>
+                    </header>
+                    <section style={containerStyles}>
+                        <BackgroundColor
+                            text="Black"
+                            name="background"
+                            value="black"
+                            click={changeBackground}
+                        />
+                        <BackgroundColor
+                            text="Blue"
+                            name="background"
+                            value="blue"
+                            click={changeBackground}
+                        />
+                        <BackgroundColor
+                            text="Green"
+                            name="background"
+                            value="green"
+                            click={changeBackground}
+                        />
+                        <BackgroundColor
+                            text="Grey"
+                            name="background"
+                            value="grey"
+                            click={changeBackground}
+                        />
+                        <BackgroundColor
+                            text="Orange"
+                            name="background"
+                            value="orange"
+                            click={changeBackground}
+                        />
+                        <BackgroundColor
+                            text="Purple"
+                            name="background"
+                            value="purple"
+                            click={changeBackground}
+                        />
+                        <BackgroundColor
+                            text="Red"
+                            name="background"
+                            value="red"
+                            click={changeBackground}
+                        />
+                        <BackgroundColor
+                            text="Yellow"
+                            name="background"
+                            value="yellow"
+                            click={changeBackground}
+                        />
+                        <BackgroundColor
+                            text="White"
+                            name="background"
+                            value="white"
+                            click={changeBackground}
+                        />
+                    </section>
+                </div>
+                <div className="text-color">
+                    <header>
+                        <h1>Text Color</h1>
+                    </header>
+                    <section style={containerStyles}>
+                        <TextColor
+                            text="Black"
+                            name="text"
+                            value="black"
+                            click={changeText}
+                        />
+                        <TextColor
+                            text="Blue"
+                            name="text"
+                            value="blue"
+                            click={changeText}
+                        />
+                        <TextColor
+                            text="Green"
+                            name="background"
+                            value="green"
+                            click={changeText}
+                        />
+                        <TextColor
+                            text="Grey"
+                            name="background"
+                            value="grey"
+                            click={changeText}
+                        />
+                        <TextColor
+                            text="Orange"
+                            name="background"
+                            value="orange"
+                            click={changeText}
+                        />
+                        <TextColor
+                            text="Purple"
+                            name="background"
+                            value="purple"
+                            click={changeText}
+                        />
+                        <TextColor
+                            text="Red"
+                            name="background"
+                            value="red"
+                            click={changeText}
+                        />
+                        <TextColor
+                            text="Yellow"
+                            name="background"
+                            value="yellow"
+                            click={changeText}
+                        />
+                        <TextColor
+                            text="White"
+                            name="background"
+                            value="white"
+                            click={changeText}
+                        />
+                    </section>
+                </div>
+            </section>
+            <Footer />
         </main>
     )
 }

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-const TextButton = ({ onchange, value }) => {
+const TextButton = ({ change, value }) => {
     const InputTextStyled = {
         marginTop: '30px',
         padding: '15px',
@@ -13,8 +13,8 @@ const TextButton = ({ onchange, value }) => {
             <input
                 type="text"
                 value={value}
-                placeholder="Enter your text"
-                onChange={onchange}
+                placeholder="Write something..."
+                onChange={change}
                 style={InputTextStyled}
             ></input>
         </div>
@@ -22,8 +22,8 @@ const TextButton = ({ onchange, value }) => {
 }
 
 TextButton.propTypes = {
-    onchange: PropTypes.string,
-    value: PropTypes.string,
+  value: PropTypes.string,
+  change: PropTypes.func,
 }
 
 export default TextButton

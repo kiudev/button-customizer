@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types'
 
-const Button = ({ text, bgColor }) => {
-  return (
-    <div>
-      <button style={bgColor}>{text}</button>
-    </div>
-  )
+const Button = ({ text, style }) => {
+    return (
+        <div>
+            <button style={style}>{text}</button>
+        </div>
+    )
 }
 
 Button.propTypes = {
-  text: PropTypes.string,
-  bgColor: PropTypes.string
+    text: PropTypes.string,
+    style: PropTypes.string,
 }
 
 export default Button

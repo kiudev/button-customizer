@@ -27,11 +27,6 @@ function App() {
         setTextColor(text.target.value)
     }
 
-    const containerStyles = {
-        display: 'flex',
-        gap: '20px',
-    }
-
     return (
         <main>
             <header>
@@ -52,120 +47,132 @@ function App() {
                 <header>
                     <h1>Background Color</h1>
                 </header>
-                <section style={containerStyles}>
-                    <BackgroundColor
-                        style={{ backgroundColor: 'black' }}
-                        name="background"
-                        value="black"
-                        click={changeBackground}
-                    />
-                    <BackgroundColor
-                        style={{ backgroundColor: 'blue' }}
-                        name="background"
-                        value="blue"
-                        click={changeBackground}
-                    />
-                    <BackgroundColor
-                        style={{ backgroundColor: 'green' }}
-                        name="background"
-                        value="green"
-                        click={changeBackground}
-                    />
-                    <BackgroundColor
-                        style={{ backgroundColor: 'grey' }}
-                        name="background"
-                        value="grey"
-                        click={changeBackground}
-                    />
-                    <BackgroundColor
-                        style={{ backgroundColor: 'orange' }}
-                        name="background"
-                        value="orange"
-                        click={changeBackground}
-                    />
-                    <BackgroundColor
-                        style={{ backgroundColor: 'purple' }}
-                        name="background"
-                        value="purple"
-                        click={changeBackground}
-                    />
-                    <BackgroundColor
-                        style={{ backgroundColor: 'red' }}
-                        name="background"
-                        value="red"
-                        click={changeBackground}
-                    />
-                    <BackgroundColor
-                        style={{ backgroundColor: 'yellow' }}
-                        name="background"
-                        value="yellow"
-                        click={changeBackground}
-                    />
-                    <BackgroundColor
-                        style={{ backgroundColor: 'white' }}
-                        name="background"
-                        value="white"
-                        click={changeBackground}
-                    />
+                <section className="container">
+                    <div className="container-responsive">
+                        <BackgroundColor
+                            style={{ backgroundColor: 'black' }}
+                            name="background"
+                            value="black"
+                            click={changeBackground}
+                        />
+                        <BackgroundColor
+                            style={{ backgroundColor: 'blue' }}
+                            name="background"
+                            value="blue"
+                            click={changeBackground}
+                        />
+                        <BackgroundColor
+                            style={{ backgroundColor: 'green' }}
+                            name="background"
+                            value="green"
+                            click={changeBackground}
+                        />
+                        <BackgroundColor
+                            style={{ backgroundColor: 'grey' }}
+                            name="background"
+                            value="grey"
+                            click={changeBackground}
+                        />
+                    </div>
+                    <div className="container-responsive">
+                        <BackgroundColor
+                            style={{ backgroundColor: 'orange' }}
+                            name="background"
+                            value="orange"
+                            click={changeBackground}
+                        />
+                        <BackgroundColor
+                            style={{ backgroundColor: 'purple' }}
+                            name="background"
+                            value="purple"
+                            click={changeBackground}
+                        />
+                        <BackgroundColor
+                            style={{ backgroundColor: 'red' }}
+                            name="background"
+                            value="red"
+                            click={changeBackground}
+                        />
+                        <BackgroundColor
+                            style={{ backgroundColor: 'yellow' }}
+                            name="background"
+                            value="yellow"
+                            click={changeBackground}
+                        />
+                    </div>
+                    <div className="container-responsive">
+                        <BackgroundColor
+                            style={{ backgroundColor: 'white' }}
+                            name="background"
+                            value="white"
+                            click={changeBackground}
+                        />
+                    </div>
                 </section>
                 <header>
                     <h1>Text Color</h1>
                 </header>
-                <section style={containerStyles}>
-                    <TextColor
-                        style={{ backgroundColor: 'black' }}
-                        name="text"
-                        value="black"
-                        click={changeText}
-                    />
-                    <TextColor
-                        style={{ backgroundColor: 'blue' }}
-                        name="text"
-                        value="blue"
-                        click={changeText}
-                    />
-                    <TextColor
-                        style={{ backgroundColor: 'green' }}
-                        name="background"
-                        value="green"
-                        click={changeText}
-                    />
-                    <TextColor
-                        style={{ backgroundColor: 'grey' }}
-                        name="background"
-                        value="grey"
-                        click={changeText}
-                    />
-                    <TextColor
-                        style={{ backgroundColor: 'orange' }}
-                        name="background"
-                        value="orange"
-                        click={changeText}
-                    />
-                    <TextColor
-                        style={{ backgroundColor: 'purple' }}
-                        name="background"
-                        value="purple"
-                        click={changeText}
-                    />
-                    <TextColor
-                        style={{ backgroundColor: 'red' }}
-                        name="background"
-                        value="red"
-                        click={changeText}
-                    />
-                    <TextColor
-                        style={{ backgroundColor: 'yellow' }}
-                        name="background"
-                        value="yellow"
-                        click={changeText}
-                    />
-                    <TextColor
-                        style={{ backgroundColor: 'white' }}
-                        name="background"
-                        value="white"
-                        click={changeText}
-                    />
+                <section className="container">
+                    <div className="container-responsive">
+                        <TextColor
+                            style={{ backgroundColor: 'black' }}
+                            name="text"
+                            value="black"
+                            click={changeText}
+                        />
+                        <TextColor
+                            style={{ backgroundColor: 'blue' }}
+                            name="text"
+                            value="blue"
+                            click={changeText}
+                        />
+                        <TextColor
+                            style={{ backgroundColor: 'green' }}
+                            name="background"
+                            value="green"
+                            click={changeText}
+                        />
+                        <TextColor
+                            style={{ backgroundColor: 'grey' }}
+                            name="background"
+                            value="grey"
+                            click={changeText}
+                        />
+                    </div>
+                    <div className="container-responsive">
+                        <TextColor
+                            style={{ backgroundColor: 'orange' }}
+                            name="background"
+                            value="orange"
+                            click={changeText}
+                        />
+                        <TextColor
+                            style={{ backgroundColor: 'purple' }}
+                            name="background"
+                            value="purple"
+                            click={changeText}
+                        />
+                        <TextColor
+                            style={{ backgroundColor: 'red' }}
+                            name="background"
+                            value="red"
+                            click={changeText}
+                        />
+                        <TextColor
+                            style={{ backgroundColor: 'yellow' }}
+                            name="background"
+                            value="yellow"
+                            click={changeText}
+                        />
+                    </div>
+                    <div className="container-responsive">
+                        <TextColor
+                            style={{ backgroundColor: 'white' }}
+                            name="background"
+                            value="white"
+                            click={changeText}
+                        />
+                    </div>
                 </section>
             </div>
             <Footer />

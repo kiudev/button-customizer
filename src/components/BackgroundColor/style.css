@@ -1,6 +1,6 @@
 .bgcolor-button {
     cursor: pointer;
-    margin: 0 40px;
+    margin-left: 30px;
     border: 1px solid transparent;
     padding: 20px;
     border-radius: 9999px;
@@ -8,4 +8,10 @@
 
 .bgcolor-button:hover {
     border-color: #64ceff;
+}
+
+@media (max-width: 1024px) {
+    .bgcolor-button {
+        margin-left: 30px;
+    }
 }

@@ -15,6 +15,23 @@ footer {
     transition: all 0.2s ease-in-out;
 }
 .github-logo:hover {
-    fill: white;
     transform: scale(1.1);
+}
+
+@media (max-width: 760px) {
+    footer {
+        position: relative;
+        margin-top: 40px;
+        margin-bottom: -40px;
+    }
+
+    .github-logo {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .github-logo {
+        display: none;
+    }
 }

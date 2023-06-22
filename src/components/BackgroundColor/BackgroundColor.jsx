@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
 import './style.css'
 
-const BackgroundColor = ({ text, click, name, value }) => {
+const BackgroundColor = ({ text, click, name, value, style }) => {
     return (
         <div>
             <button
                 className="bgcolor-button"
+                style={style}
                 type="radio"
                 name={name}
                 value={value}
@@ -19,9 +20,10 @@ const BackgroundColor = ({ text, click, name, value }) => {
 
 BackgroundColor.propTypes = {
     text: PropTypes.string,
-    click: PropTypes.string,
     name: PropTypes.string,
     value: PropTypes.string,
+    style: PropTypes.string,
+    click: PropTypes.func,
 }
 
 export default BackgroundColor

@@ -1,6 +1,11 @@
 .textcolor-button {
-    width: 100px;
-    
-    text-align: center;
-    align-items: center;
+    cursor: pointer;
+    margin: 0 40px;
+    border: 1px solid transparent;
+    padding: 20px;
+    border-radius: 9999px;
+}
+
+.textcolor-button:hover {
+    border-color: #64ceff;
 }

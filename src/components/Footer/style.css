@@ -12,9 +12,9 @@ footer {
     position: absolute;
     right: 50px;
     bottom: 20px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .github-logo:hover {
-    filter: drop-shadow(0 10px 30px #ffffff);
+    fill: white;
     transform: scale(1.1);
 }

@@ -4,10 +4,6 @@
     padding: 2rem;
     text-align: center;
 }
-
-.bgColor {
-}
-
 .line {
     background-color: white;
     margin-top: 40px;
@@ -21,9 +17,4 @@ h1 {
 
 p {
     margin-top: -2px;
-}
-
-.customize-sections {
-  display: block;
-  margin-top: 20px;
 }

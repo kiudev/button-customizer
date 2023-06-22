@@ -9,7 +9,11 @@ const Footer = () => {
                 Daniel Saavedra <span>&#169;</span>
                 <span>{currentYear}</span>
             </p>
-            <a href="https://github.com/kiudev" target='_blank' rel='noreferrer'>
+            <a
+                href="https://github.com/kiudev/button-customizer"
+                target="_blank"
+                rel="noreferrer"
+            >
                 <svg
                     className="github-logo"
                     width="60"

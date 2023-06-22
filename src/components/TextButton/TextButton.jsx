@@ -1,29 +1,23 @@
 import PropTypes from 'prop-types'
+import './style.css'
 
 const TextButton = ({ change, value }) => {
-    const InputTextStyled = {
-        marginTop: '30px',
-        padding: '15px',
-        borderRadius: '1em',
-        border: '2px solid black'
-    }
-
     return (
         <div>
             <input
+                className="text-button"
                 type="text"
                 value={value}
                 placeholder="Write something..."
                 onChange={change}
-                style={InputTextStyled}
             ></input>
         </div>
     )
 }
 
 TextButton.propTypes = {
-  value: PropTypes.string,
-  change: PropTypes.func,
+    value: PropTypes.string,
+    change: PropTypes.func,
 }
 
 export default TextButton

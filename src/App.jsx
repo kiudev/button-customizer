@@ -6,29 +6,34 @@ import TextColor from './components/TextColor/TextColor'
 import BackgroundColor from './components/BackgroundColor/BackgroundColor'
 import Footer from './components/Footer/Footer'
 import Font from './components/Font/Font'
+import SizeButton from './components/SizeButton/SizeButton'
 
 function App() {
-    // Create useState ("value" and "setValue") and a function that allows the user to write something in the button.
-    const [value, setValue] = useState('Button')
+    // * TEXT
+    //  Create useState ("value" and "setValue") and a function that allows the user to write something in the button.
+    const [value, setValue] = useState('')
 
     const handleChange = text => {
         setValue(text.target.value)
     }
-    // Create useState ("bgColor" and "setbgColor") and a function that allows you to print the background color in the button.
+    // * BACKGROUND COLOR
+    // Create useState ("bgColor" and "setbgColor") and a function that allows the user to print the background color in the button.
     const [bgColor, setBgColor] = useState('')
 
     const changeBackground = backgroundColor => {
         setBgColor(backgroundColor.target.value)
     }
 
-    // Create useState ("textColor" and "setTextColor") and a function that allows you to print the text color in the button.
+    // * TEXT COLOR
+    // Create useState ("textColor" and "setTextColor") and a function that allows the user to print the text color in the button.
     const [textColor, setTextColor] = useState('white')
 
     const changeText = text => {
         setTextColor(text.target.value)
     }
 
-    // Create useState ("isBold" and "setIsBold") and a function that allows you to print the font bold
+    // * BOLD
+    // Create useState ("isBold" and "setIsBold") and a function that allows the user to print the font bold
     // with a ternary operation that makes a condition whether the user wants the font bold or not.
     // (isBold ? 'normal' : 'bold')
     const [isBold, setIsBold] = useState('normal')
@@ -39,7 +44,8 @@ function App() {
         setIsClickedBold(!isClickedBold)
     }
 
-    // Create useState ("isItalic" and "setIsItalic") and a function that allows you to print the font italic
+    // * ITALIC
+    // Create useState ("isItalic" and "setIsItalic") and a function that allows the user to print the font italic
     // with a ternary operation that makes a condition whether the user wants the font italic or not.
     // (isItalic ? 'normal' : 'italic')
     const [isItalic, setIsItalic] = useState('normal')
@@ -50,7 +56,8 @@ function App() {
         setIsClickedItalic(!isClickedItalic)
     }
 
-    // Create useState ("isUnderline" and "setIsUnderline") and a function that allows you to print the font underline
+    // * UNDERLINE
+    // Create useState ("isUnderline" and "setIsUnderline") and a function that allows the user to print the font underline
     // with a ternary operation that makes a condition whether the user wants the font underline or not.
     // (isUnderline ? 'none' : 'underline')
     const [isUnderline, setIsUnderline] = useState('normal')
@@ -59,6 +66,22 @@ function App() {
     const changeFontDecoration = () => {
         setIsUnderline(!isUnderline)
         setIsClickedUnderline(!isClickedUnderline)
+    }
+
+    // * WIDTH
+    // Create useState ("widthButton" and "setWidthButton") and a function that allows the user to set width button.
+    const [widthButton, setWidthButton] = useState('0')
+
+    const changeWidth = width => {
+        setWidthButton(width.target.value)
+    }
+
+    // * HEIGHT
+    // Create useState ("widthButton" and "setWidthButton") and a function that allows the user to set height button.
+    const [heightButton, setHeightButton] = useState('0')
+
+    const changeHeight = height => {
+        setHeightButton(height.target.value)
     }
 
     return (
@@ -74,10 +97,21 @@ function App() {
                         fontWeight: isBold ? 'normal' : 'bold',
                         fontStyle: isItalic ? 'normal' : 'italic',
                         textDecoration: isUnderline ? 'none' : 'underline',
-                        width: '200px',
-                        height: '80px',
+                        width: widthButton,
+                        height: heightButton,
                     }}
                 />
+                <h3>Enter your size with any unit</h3>
+                <div
+                    style={{
+                        display: 'flex',
+                        placeContent: 'center',
+                        gap: '20px',
+                    }}
+                >
+                    <SizeButton placeholder="X" change={changeWidth} />
+                    <SizeButton placeholder="Y" change={changeHeight} />
+                </div>
                 <TextButton change={handleChange} />
                 <section className="font-buttons">
                     <Font
@@ -94,7 +128,9 @@ function App() {
                         style={{
                             fontFamily: 'sans',
                             fontStyle: 'italic',
-                            backgroundColor: isClickedItalic ? '#c2c2c2' : '#000',
+                            backgroundColor: isClickedItalic
+                                ? '#c2c2c2'
+                                : '#000',
                             color: isClickedItalic ? '#000' : '#fff',
                             padding: '10px 18px',
                         }}
@@ -106,7 +142,9 @@ function App() {
                         style={{
                             fontFamily: 'sans',
                             textDecoration: 'underline',
-                            backgroundColor: isClickedUnderline ? '#c2c2c2' : '#000',
+                            backgroundColor: isClickedUnderline
+                                ? '#c2c2c2'
+                                : '#000',
                             color: isClickedUnderline ? '#000' : '#fff',
                         }}
                         value="underline"

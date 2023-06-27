@@ -5,15 +5,16 @@ import TextButton from './components/TextButton/TextButton'
 import TextColor from './components/TextColor/TextColor'
 import BackgroundColor from './components/BackgroundColor/BackgroundColor'
 import Footer from './components/Footer/Footer'
-import Font from './components/Font/Font'
+import TextStyle from './components/TextStyle/TextStyle'
 import SizeButton from './components/SizeButton/SizeButton'
+import TextSize from './components/TextSize/TextSize'
 
 function App() {
     // * TEXT
     //  Create useState ("value" and "setValue") and a function that allows the user to write something in the button.
     const [value, setValue] = useState('')
 
-    const handleChange = text => {
+    const writeText = text => {
         setValue(text.target.value)
     }
     // * BACKGROUND COLOR
@@ -68,6 +69,12 @@ function App() {
         setIsClickedUnderline(!isClickedUnderline)
     }
 
+    // * FONT SIZE
+    const [textSize, setTextSize] = useState('1px')
+    const changeTextSize = size => {
+        setTextSize(size.target.value)
+    }
+
     // * WIDTH
     // Create useState ("widthButton" and "setWidthButton") and a function that allows the user to set width button.
     const [widthButton, setWidthButton] = useState('0')
@@ -97,6 +104,7 @@ function App() {
                         fontWeight: isBold ? 'normal' : 'bold',
                         fontStyle: isItalic ? 'normal' : 'italic',
                         textDecoration: isUnderline ? 'none' : 'underline',
+                        fontSize: textSize,
                         width: widthButton,
                         height: heightButton,
                     }}
@@ -112,9 +120,12 @@ function App() {
                     <SizeButton placeholder="X" change={changeWidth} />
                     <SizeButton placeholder="Y" change={changeHeight} />
                 </div>
-                <TextButton change={handleChange} />
+                <div className="text-container">
+                    <TextButton change={writeText} />
+                    <TextSize change={changeTextSize} />
+                </div>
                 <section className="font-buttons">
-                    <Font
+                    <TextStyle
                         style={{
                             fontFamily: 'sans',
                             fontWeight: 'bold',
@@ -124,7 +135,7 @@ function App() {
                         click={changeFontWeight}
                         text="B"
                     />
-                    <Font
+                    <TextStyle
                         style={{
                             fontFamily: 'sans',
                             fontStyle: 'italic',
@@ -138,7 +149,7 @@ function App() {
                         click={changeFontStyle}
                         text="I"
                     />
-                    <Font
+                    <TextStyle
                         style={{
                             fontFamily: 'sans',
                             textDecoration: 'underline',

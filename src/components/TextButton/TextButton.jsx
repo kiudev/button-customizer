@@ -16,6 +16,7 @@ const TextButton = ({ change, value }) => {
 }
 
 TextButton.propTypes = {
+    style: PropTypes.string,
     value: PropTypes.string,
     change: PropTypes.func,
 }

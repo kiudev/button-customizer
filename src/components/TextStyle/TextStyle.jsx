@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
 import './style.css'
 
-const Font = ({ click, value, text, style }) => {
+const TextStyle = ({ click, value, text, style }) => {
     return (
         <div>
             <button
-                className="font"
+                className="text-style"
                 style={style}
                 onClick={click}
                 value={value}
@@ -16,11 +16,11 @@ const Font = ({ click, value, text, style }) => {
     )
 }
 
-Font.propTypes = {
+TextStyle.propTypes = {
     value: PropTypes.string,
     text: PropTypes.string,
     style: PropTypes.string,
     click: PropTypes.func,
 }
 
-export default Font
+export default TextStyle

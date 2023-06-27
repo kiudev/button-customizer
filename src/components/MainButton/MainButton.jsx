@@ -4,7 +4,9 @@ import './style.css'
 const Button = ({ text, style }) => {
     return (
         <div>
-            <button className='button' style={style}>{text}</button>
+            <button className="button" style={style}>
+                {text}
+            </button>
         </div>
     )
 }

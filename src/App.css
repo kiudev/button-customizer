@@ -40,6 +40,10 @@ h1 {
     font-weight: bold;
 }
 
+h3 {
+    margin-top: -5px;
+}
+
 p {
     margin-top: -2px;
 }

@@ -94,7 +94,6 @@ function App() {
     return (
         <main>
             <header>
-                <h1>Test how your button looks</h1>
                 <MainButton
                     text={value}
                     style={{
@@ -109,22 +108,35 @@ function App() {
                         height: heightButton,
                     }}
                 />
-                <h3>Size with any unit</h3>
-                <div
+                <h1>Enter the properties</h1>
+                <section
                     style={{
                         display: 'flex',
-                        placeContent: 'center',
-                        gap: '20px',
+                        justifyContent: 'center',
+                        gap: '60px',
                     }}
                 >
-                    <SizeButton placeholder="X" change={changeWidth} />
-                    <SizeButton placeholder="Y" change={changeHeight} />
-                </div>
-                <h3>Write text and set the size</h3>
-                <div className="text-container">
-                    <TextButton change={writeText} />
-                    <TextSize change={changeTextSize} />
-                </div>
+                    <div>
+                        <h3>Size the button with any unit</h3>
+                        <div
+                            style={{
+                                display: 'flex',
+                                placeContent: 'center',
+                                gap: '20px',
+                            }}
+                        >
+                            <SizeButton placeholder="X" change={changeWidth} />
+                            <SizeButton placeholder="Y" change={changeHeight} />
+                        </div>
+                    </div>
+                    <div style={{ display: 'block' }}>
+                        <h3>Write the text and set the size</h3>
+                        <div className="text-container">
+                            <TextButton change={writeText} />
+                            <TextSize change={changeTextSize} />
+                        </div>
+                    </div>
+                </section>
                 <section className="font-buttons">
                     <TextStyle
                         style={{

@@ -1,13 +1,10 @@
 .text-button {
     width: 120px;
-    height: 20px;
+    height: 30px;
     border-radius: 0.5em;
-    border: 2px solid black;
+    border: 2px solid transparent;
     text-align: center;
     outline: none;
     transition: all 0.2s ease-in-out;
-}
-
-.text-button:focus {
-    padding: 6px;
+    font-size: 12px;
 }

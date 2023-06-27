@@ -4,7 +4,7 @@ import './style.css'
 const TextSize = ({ change }) => {
     return (
         <div>
-            <input className="input-size" type="text" onChange={change}></input>
+            <input className="text-size" type="text" onChange={change}></input>
         </div>
     )
 }

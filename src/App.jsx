@@ -109,7 +109,7 @@ function App() {
                         height: heightButton,
                     }}
                 />
-                <h3>Enter your size with any unit</h3>
+                <h3>Size with any unit</h3>
                 <div
                     style={{
                         display: 'flex',
@@ -120,6 +120,7 @@ function App() {
                     <SizeButton placeholder="X" change={changeWidth} />
                     <SizeButton placeholder="Y" change={changeHeight} />
                 </div>
+                <h3>Write text and set the size</h3>
                 <div className="text-container">
                     <TextButton change={writeText} />
                     <TextSize change={changeTextSize} />
@@ -167,7 +168,7 @@ function App() {
             <div className="line"></div>
             <div>
                 <header>
-                    <h1>Background Color</h1>
+                    <h2>Background Color</h2>
                 </header>
                 <section className="container">
                     <div className="container-responsive">
@@ -232,7 +233,7 @@ function App() {
                     </div>
                 </section>
                 <header>
-                    <h1>Text Color</h1>
+                    <h2>Text Color</h2>
                 </header>
                 <section className="container">
                     <div className="container-responsive">

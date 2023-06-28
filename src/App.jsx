@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer'
 import TextStyle from './components/TextStyle/TextStyle'
 import SizeButton from './components/SizeButton/SizeButton'
 import TextSize from './components/TextSize/TextSize'
+import BorderColor from './components/Border/BorderColor'
 
 function App() {
     // * TEXT
@@ -70,7 +71,7 @@ function App() {
     }
 
     // * FONT SIZE
-    const [textSize, setTextSize] = useState('1px')
+    const [textSize, setTextSize] = useState('0')
     const changeTextSize = size => {
         setTextSize(size.target.value)
     }
@@ -91,6 +92,15 @@ function App() {
         setHeightButton(height.target.value)
     }
 
+    // * BORDER
+
+    // * BORDER COLOR
+    const [borderColorButton, setBorderColorButton] = useState('')
+
+    const changeBorderColor = borderColor => {
+        setBorderColorButton(borderColor.target.value)
+    }
+
     return (
         <main>
             <header>
@@ -106,6 +116,7 @@ function App() {
                         fontSize: textSize,
                         width: widthButton,
                         height: heightButton,
+                        borderColor: borderColorButton,
                     }}
                 />
                 <h1>Enter the properties</h1>
@@ -133,7 +144,10 @@ function App() {
                         <h3>Write the text and set the size</h3>
                         <div className="text-container">
                             <TextButton change={writeText} />
-                            <TextSize change={changeTextSize} />
+                            <TextSize
+                                change={changeTextSize}
+                                placeholder="px"
+                            />
                         </div>
                     </div>
                 </section>
@@ -178,7 +192,7 @@ function App() {
                 </section>
             </header>
             <div className="line"></div>
-            <div>
+            <section>
                 <header>
                     <h2>Background Color</h2>
                 </header>
@@ -186,25 +200,21 @@ function App() {
                     <div className="container-responsive">
                         <BackgroundColor
                             style={{ backgroundColor: 'black' }}
-                            name="background"
                             value="black"
                             click={changeBackground}
                         />
                         <BackgroundColor
                             style={{ backgroundColor: 'blue' }}
-                            name="background"
                             value="blue"
                             click={changeBackground}
                         />
                         <BackgroundColor
                             style={{ backgroundColor: 'green' }}
-                            name="background"
                             value="green"
                             click={changeBackground}
                         />
                         <BackgroundColor
                             style={{ backgroundColor: 'grey' }}
-                            name="background"
                             value="grey"
                             click={changeBackground}
                         />
@@ -212,25 +222,21 @@ function App() {
                     <div className="container-responsive">
                         <BackgroundColor
                             style={{ backgroundColor: 'orange' }}
-                            name="background"
                             value="orange"
                             click={changeBackground}
                         />
                         <BackgroundColor
                             style={{ backgroundColor: 'purple' }}
-                            name="background"
                             value="purple"
                             click={changeBackground}
                         />
                         <BackgroundColor
                             style={{ backgroundColor: 'red' }}
-                            name="background"
                             value="red"
                             click={changeBackground}
                         />
                         <BackgroundColor
                             style={{ backgroundColor: 'yellow' }}
-                            name="background"
                             value="yellow"
                             click={changeBackground}
                         />
@@ -238,7 +244,6 @@ function App() {
                     <div className="container-responsive">
                         <BackgroundColor
                             style={{ backgroundColor: 'white' }}
-                            name="background"
                             value="white"
                             click={changeBackground}
                         />
@@ -251,25 +256,21 @@ function App() {
                     <div className="container-responsive">
                         <TextColor
                             style={{ backgroundColor: 'black' }}
-                            name="text"
                             value="black"
                             click={changeText}
                         />
                         <TextColor
                             style={{ backgroundColor: 'blue' }}
-                            name="text"
                             value="blue"
                             click={changeText}
                         />
                         <TextColor
                             style={{ backgroundColor: 'green' }}
-                            name="background"
                             value="green"
                             click={changeText}
                         />
                         <TextColor
                             style={{ backgroundColor: 'grey' }}
-                            name="background"
                             value="grey"
                             click={changeText}
                         />
@@ -277,25 +278,21 @@ function App() {
                     <div className="container-responsive">
                         <TextColor
                             style={{ backgroundColor: 'orange' }}
-                            name="background"
                             value="orange"
                             click={changeText}
                         />
                         <TextColor
                             style={{ backgroundColor: 'purple' }}
-                            name="background"
                             value="purple"
                             click={changeText}
                         />
                         <TextColor
                             style={{ backgroundColor: 'red' }}
-                            name="background"
                             value="red"
                             click={changeText}
                         />
                         <TextColor
                             style={{ backgroundColor: 'yellow' }}
-                            name="background"
                             value="yellow"
                             click={changeText}
                         />
@@ -303,13 +300,68 @@ function App() {
                     <div className="container-responsive">
                         <TextColor
                             style={{ backgroundColor: 'white' }}
-                            name="background"
                             value="white"
                             click={changeText}
                         />
                     </div>
                 </section>
-            </div>
+                <header>
+                    <h2>Border</h2>
+                </header>
+                <section className="container">
+                    <div className="container-responsive">
+                        <BorderColor
+                            style={{ backgroundColor: 'black' }}
+                            value="black"
+                            click={changeBorderColor}
+                        />
+                        <BorderColor
+                            style={{ backgroundColor: 'blue' }}
+                            value="black"
+                            click={changeBorderColor}
+                        />
+                        <BorderColor
+                            style={{ backgroundColor: 'green' }}
+                            value="black"
+                            click={changeBorderColor}
+                        />
+                        <BorderColor
+                            style={{ backgroundColor: 'gray' }}
+                            value="black"
+                            click={changeBorderColor}
+                        />
+                    </div>
+                    <div className="container-responsive">
+                        <BorderColor
+                            style={{ backgroundColor: 'orange' }}
+                            value="black"
+                            click={changeBorderColor}
+                        />
+                        <BorderColor
+                            style={{ backgroundColor: 'purple' }}
+                            value="black"
+                            click={changeBorderColor}
+                        />
+                        <BorderColor
+                            style={{ backgroundColor: 'red' }}
+                            value="black"
+                            click={changeBorderColor}
+                        />
+                        <BorderColor
+                            style={{ backgroundColor: 'yellow' }}
+                            value="black"
+                            click={changeBorderColor}
+                        />
+                    </div>
+                    <div className="container-responsive">
+                        <BorderColor
+                            style={{ backgroundColor: 'white' }}
+                            value="black"
+                            click={changeBorderColor}
+                        />
+                    </div>
+                </section>
+            </section>
             <Footer />
         </main>
     )

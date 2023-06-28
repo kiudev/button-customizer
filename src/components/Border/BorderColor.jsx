@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types'
-import './style.css'
 
-const BackgroundColor = ({ text, click, value, style }) => {
+const BorderColor = ({ style, value, click, text }) => {
     return (
         <div>
             <button
                 className="bgcolor-button"
                 style={style}
                 type="radio"
+                name={name}
                 value={value}
                 onClick={click}
             >
@@ -17,11 +17,11 @@ const BackgroundColor = ({ text, click, value, style }) => {
     )
 }
 
-BackgroundColor.propTypes = {
+BorderColor.propTypes = {
     text: PropTypes.string,
     value: PropTypes.string,
     style: PropTypes.string,
     click: PropTypes.func,
 }
 
-export default BackgroundColor
+export default BorderColor

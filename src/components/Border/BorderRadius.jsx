@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
-import './style.css'
 
-const BorderWidth = ({ change, placeholder }) => {
+const BorderRadius = ({ change, placeholder }) => {
     return (
         <div>
             <input
@@ -14,9 +13,9 @@ const BorderWidth = ({ change, placeholder }) => {
     )
 }
 
-BorderWidth.propTypes = {
+BorderRadius.propTypes = {
     change: PropTypes.func,
     placeholder: PropTypes.string,
 }
 
-export default BorderWidth
+export default BorderRadius

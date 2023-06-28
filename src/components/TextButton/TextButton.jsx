@@ -1,14 +1,13 @@
 import PropTypes from 'prop-types'
 import './style.css'
 
-const TextButton = ({ change, value }) => {
+const TextButton = ({ change, placeholder }) => {
     return (
         <div>
             <input
                 className="text-button"
                 type="text"
-                value={value}
-                placeholder="Write something..."
+                placeholder={placeholder}
                 onChange={change}
             ></input>
         </div>
@@ -16,9 +15,8 @@ const TextButton = ({ change, value }) => {
 }
 
 TextButton.propTypes = {
-    style: PropTypes.string,
-    value: PropTypes.string,
     change: PropTypes.func,
+    placeholder: PropTypes.string,
 }
 
 export default TextButton

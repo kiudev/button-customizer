@@ -9,6 +9,8 @@ import TextStyle from './components/TextStyle/TextStyle'
 import SizeButton from './components/SizeButton/SizeButton'
 import TextSize from './components/TextSize/TextSize'
 import BorderColor from './components/Border/BorderColor'
+import BorderWidth from './components/Border/BorderWidth'
+import BorderRadius from './components/Border/BorderRadius'
 
 function App() {
     // * TEXT
@@ -95,10 +97,24 @@ function App() {
     // * BORDER
 
     // * BORDER COLOR
-    const [borderColorButton, setBorderColorButton] = useState('')
+    const [borderColorButton, setBorderColorButton] = useState(false)
 
     const changeBorderColor = borderColor => {
         setBorderColorButton(borderColor.target.value)
+    }
+
+    // * BORDER WIDTH
+    const [borderWidthInput, setBorderWidthInput] = useState(0)
+
+    const changeBorderWidth = borderWidth => {
+        setBorderWidthInput(borderWidth.target.value)
+    }
+
+    // * BORDER RADIUS
+    const [borderRadiusInput, setBorderRadiusInput] = useState(0)
+
+    const changeBorderRadius = borderRadius => {
+        setBorderRadiusInput(borderRadius.target.value)
     }
 
     return (
@@ -117,6 +133,8 @@ function App() {
                         width: widthButton,
                         height: heightButton,
                         borderColor: borderColorButton,
+                        borderWidth: borderWidthInput,
+                        borderRadius: borderRadiusInput,
                     }}
                 />
                 <h1>Enter the properties</h1>
@@ -128,25 +146,44 @@ function App() {
                     }}
                 >
                     <div>
-                        <h3>Size the button with any unit</h3>
+                        <h3>Set the width and height</h3>
                         <div
                             style={{
                                 display: 'flex',
                                 placeContent: 'center',
-                                gap: '20px',
+                                gap: '5px',
                             }}
                         >
-                            <SizeButton placeholder="X" change={changeWidth} />
-                            <SizeButton placeholder="Y" change={changeHeight} />
+                            <SizeButton
+                                placeholder="width"
+                                change={changeWidth}
+                            />
+                            <SizeButton
+                                placeholder="height"
+                                change={changeHeight}
+                            />
                         </div>
                     </div>
                     <div style={{ display: 'block' }}>
-                        <h3>Write the text and set the size</h3>
+                        <h3>Write and set the size</h3>
                         <div className="text-container">
-                            <TextButton change={writeText} />
+                            <TextButton change={writeText} placeholder="text" />
                             <TextSize
                                 change={changeTextSize}
-                                placeholder="px"
+                                placeholder="size"
+                            />
+                        </div>
+                    </div>
+                    <div style={{ display: 'block' }}>
+                        <h3>Border width and radius</h3>
+                        <div className="text-container">
+                            <BorderWidth
+                                change={changeBorderWidth}
+                                placeholder="width"
+                            />
+                            <BorderRadius
+                                change={changeBorderRadius}
+                                placeholder="radius"
                             />
                         </div>
                     </div>
@@ -306,7 +343,7 @@ function App() {
                     </div>
                 </section>
                 <header>
-                    <h2>Border</h2>
+                    <h2>Border Color</h2>
                 </header>
                 <section className="container">
                     <div className="container-responsive">
@@ -317,46 +354,46 @@ function App() {
                         />
                         <BorderColor
                             style={{ backgroundColor: 'blue' }}
-                            value="black"
+                            value="blue"
                             click={changeBorderColor}
                         />
                         <BorderColor
                             style={{ backgroundColor: 'green' }}
-                            value="black"
+                            value="green"
                             click={changeBorderColor}
                         />
                         <BorderColor
                             style={{ backgroundColor: 'gray' }}
-                            value="black"
+                            value="gray"
                             click={changeBorderColor}
                         />
                     </div>
                     <div className="container-responsive">
                         <BorderColor
                             style={{ backgroundColor: 'orange' }}
-                            value="black"
+                            value="orange"
                             click={changeBorderColor}
                         />
                         <BorderColor
                             style={{ backgroundColor: 'purple' }}
-                            value="black"
+                            value="purple"
                             click={changeBorderColor}
                         />
                         <BorderColor
                             style={{ backgroundColor: 'red' }}
-                            value="black"
+                            value="red"
                             click={changeBorderColor}
                         />
                         <BorderColor
                             style={{ backgroundColor: 'yellow' }}
-                            value="black"
+                            value="yellow"
                             click={changeBorderColor}
                         />
                     </div>
                     <div className="container-responsive">
                         <BorderColor
                             style={{ backgroundColor: 'white' }}
-                            value="black"
+                            value="white"
                             click={changeBorderColor}
                         />
                     </div>

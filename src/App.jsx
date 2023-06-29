@@ -117,13 +117,20 @@ function App() {
         setBorderRadiusInput(borderRadius.target.value)
     }
 
+    // * FONT
+    const [font, setFont] = useState('Arial')
+
+    const changeFont = fonts => {
+        setFont(fonts.target.value)
+    }
+
     return (
         <main>
             <header>
                 <MainButton
                     text={value}
                     style={{
-                        fontFamily: 'sans',
+                        fontFamily: font,
                         backgroundColor: bgColor,
                         color: textColor,
                         fontWeight: isBold ? 'normal' : 'bold',
@@ -226,6 +233,23 @@ function App() {
                         click={changeFontDecoration}
                         text="U"
                     />
+                    <div className="text-container">
+                        <input
+                            style={{
+                                fontSize: '18px',
+                                width: '100px',
+                                height: '30px',
+                                marginTop: '20px',
+                                outline: 'none',
+                                border: '2px solid transparent',
+                                borderRadius: '0.5em',
+                                textAlign: 'center',
+                            }}
+                            type="text"
+                            value={font}
+                            onChange={changeFont}
+                        />
+                    </div>
                 </section>
             </header>
             <div className="line"></div>

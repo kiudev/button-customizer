@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types'
+import './style.css'
 
 const BorderColor = ({ style, value, click, text }) => {
     return (
         <div>
             <button
-                className="bgcolor-button"
+                className="border-color"
                 style={style}
                 type="radio"
                 name={name}

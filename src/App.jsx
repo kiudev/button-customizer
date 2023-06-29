@@ -231,7 +231,7 @@ function App() {
             <div className="line"></div>
             <section>
                 <header>
-                    <h2>Background Color</h2>
+                    <h2>Background</h2>
                 </header>
                 <section className="container">
                     <div className="container-responsive">
@@ -284,10 +284,15 @@ function App() {
                             value="white"
                             click={changeBackground}
                         />
+                        <input
+                            className="custom-color"
+                            type="color"
+                            onChange={changeBackground}
+                        />
                     </div>
                 </section>
                 <header>
-                    <h2>Text Color</h2>
+                    <h2>Text</h2>
                 </header>
                 <section className="container">
                     <div className="container-responsive">
@@ -340,10 +345,15 @@ function App() {
                             value="white"
                             click={changeText}
                         />
+                        <input
+                            className="custom-color"
+                            type="color"
+                            onChange={changeText}
+                        />
                     </div>
                 </section>
                 <header>
-                    <h2>Border Color</h2>
+                    <h2>Border</h2>
                 </header>
                 <section className="container">
                     <div className="container-responsive">
@@ -395,6 +405,11 @@ function App() {
                             style={{ backgroundColor: 'white' }}
                             value="white"
                             click={changeBorderColor}
+                        />
+                        <input
+                            className="custom-color"
+                            type="color"
+                            onChange={changeBorderColor}
                         />
                     </div>
                 </section>

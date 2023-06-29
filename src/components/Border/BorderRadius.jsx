@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import './style.css'
 
 const BorderRadius = ({ change, placeholder }) => {
     return (

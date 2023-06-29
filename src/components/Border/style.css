@@ -5,6 +5,26 @@
     border: 2px solid transparent;
     text-align: center;
     outline: none;
-    transition: all 0.2s ease-in-out;
     font-size: 12px;
+}
+
+.border-color {
+    cursor: pointer;
+    margin-left: 30px;
+    border: 2px solid transparent;
+    padding: 20px;
+    border-radius: 9999px;
+    transition: all 0.2s ease-in-out;
+}
+
+.border-color:hover {
+    border-color: white;
+}
+
+
+
+@media (max-width: 1024px) {
+    .border-color {
+        margin-left: 30px;
+    }
 }

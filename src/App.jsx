@@ -30,7 +30,7 @@ function App() {
 
     // * TEXT COLOR
     // Create useState ("textColor" and "setTextColor") and a function that allows the user to print the text color in the button.
-    const [textColor, setTextColor] = useState('white')
+    const [textColor, setTextColor] = useState('')
 
     const changeText = text => {
         setTextColor(text.target.value)
@@ -97,7 +97,7 @@ function App() {
     // * BORDER
 
     // * BORDER COLOR
-    const [borderColorButton, setBorderColorButton] = useState(false)
+    const [borderColorButton, setBorderColorButton] = useState('')
 
     const changeBorderColor = borderColor => {
         setBorderColorButton(borderColor.target.value)
@@ -118,7 +118,7 @@ function App() {
     }
 
     // * FONT
-    const [font, setFont] = useState('Arial')
+    const [font, setFont] = useState('sans')
 
     const changeFont = fonts => {
         setFont(fonts.target.value)
